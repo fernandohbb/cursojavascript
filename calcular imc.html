@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Logica de programacao com Javascript</h1>
+
+
+        <script> 
+
+// pedir para usuario digita seu peso;
+// pedir ao usuario digita sua altura;
+var peso = prompt("digite seu peso");
+var altura = prompt("digite sua altura");
+var imc = peso / altura**2
+alert("seu imc e : " + imc);
+
+// se imc for maior que 40 , dizer que esta com obesidade grau 3 ou morbida;
+if (imc > 40){
+    alert("obesidade morbida");
+}
+
+//se imc for entre 35 e 40 ,dizer que esta com obesidade grau 2;
+if(imc > 35 && imc < 40){
+    alert("obesidade grau 2");
+}
+// se imc for entre 30 e 35,dizer que esta com obesidade grau 1;
+if(imc >30 && imc < 35){
+    alert("obesidade grau 1 ");
+} 
+
+// se imc for entre 25 e 30 ,dizer que esta com sobrepeso;
+if(imc > 25 && imc < 30){
+    alert("sobrepeso");
+}
+// se imc for entre 18,5 e 25 , dizer que esta com peso normal;
+if(imc > 18 && imc < 25 ){
+    alert("peso normal");
+}
+
+// se peso for abaixo de 18,5 , dizer que esta abaixo do peso;
+if (imc < 18,5 ){
+    alert("abaixo do peso")
+}
+
+</script>   
+
+        
+</body>
+</html>          
+
+
