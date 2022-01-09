@@ -6,16 +6,25 @@
     </head>
     <body>
    <h1>Logica de programacao com Javascript</h1>
-   <button onclick= "mostrarSoma">mostrar soma</button>
+   <button onclick= "mostrarSoma()">mostrar soma</button>
    <script> 
 
 function mostrarSoma (){
 var num1 = prompt("digite um numero");
-num1 = parsefloat(num1);
+num1 = parseFloat(num1);
 var num2 = prompt("digite outro numero");
-num2 = parseFloat(num2);     
-alert("A soma e:" + (num1+num2));
+num2 = parseFloat(num2);
+var soma = (num1 + num2)     
+alert("A soma e:" + soma);
+
 }
+
+if(isNaN (num1) || isNaN (num2) ){
+throw new Error ("somente numeros")
+}
+
+
+
 </script>          
 </body>
 </html>
