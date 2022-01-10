@@ -1,0 +1,27 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<div id ="output"<>/div>
+<script> 
+
+var carros = new Array('gol','polo','uno','hrv','corolla','mercedes');
+var output = document.querySelector('#output');
+output.innerHTML = carros;
+msg = '';
+
+for(var i = 0; i < 6;i++){
+    msg+= 'carro' + (i+1) + ':' + carros[i] + '<br>';
+}
+
+
+output.innerHTML = msg;
+
+  </script>       
+</body>
+    </html>
