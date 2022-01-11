@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Logica de programacao com Javascript</h1>
+
+
+        <script> 
+
+        var pessoas = new Array(' ruither ',' fernando ',' raubher ');
+        
+        for(var i = 0; i< pessoas.length;i++){
+
+        //perguntar o peso de cada um dos arrays;    
+        var peso = prompt(pessoas[i]   + 'digite seu peso');
+        //em caso de digitar letra,disparar um erro:apenas numeros;
+        if(isNaN(peso))
+            alert('Error:apenas numeros')
+        peso = parseFloat(peso);
+
+        //se um dos arrays tiver peso maior ou igual a 100,dizer que precisa emagrecer,senao que esta em forma;    
+        if(peso >= 100){
+                alert(pessoas[i] + 'Voce,precisa emagrecer em cara!')
+            }else{
+                alert('Parabens,manow voce esta em forma!')
+
+                
+            }
+        }
+        
+       
+    
+              
+</script>        
+    </body>
+</html>     
