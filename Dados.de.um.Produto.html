@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Logica de programacao com Javascript</h1>
+
+        <div id="output"></div>
+        <script> 
+
+    var produto = new Object()
+    produto.veiculo = 'carro';  
+    produto.modelo = 'gol trend';
+    produto.marca = 'Volkswagen';
+    produto.cor = 'prata'
+    produto.valor = 30000
+    produto.estoque = 5
+
+   
+    var msg = ''
+
+    msg+= 'veiculo:' + produto.veiculo + '<br>';
+    msg+= 'modelo:' + produto.modelo + '<br>';
+    msg+= 'marca:' + produto.marca + '<br>';
+    msg+= 'cor:' + produto.cor + '<br>';
+    msg+= 'valor:' + produto.valor + '<br>';
+    msg+= 'estoque:' + produto.estoque + '<br>';
+
+    document.querySelector('#output').innerHTML = msg;
+
+</script>       
+</body>
+    </html> 
+    
+
+
+
