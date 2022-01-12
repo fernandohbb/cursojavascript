@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Logica de programacao com Javascript</h1>
+        <button onclick=" mostrarTabelaAlimentos()">mostrar tabela alimentos</button>
+        <div id="output"></div>
+        <script> 
+      
+
+     
+      
+        var alimentos = [
+            {"nome": "peito de frango","gramas":100,"proteina":25,"carboidrato":0},
+            {"nome": "file de tilapia", "gramas":100,"proteina":35,"carboidrato":0},
+            {"nome":"lombo suino", "gramas":100,"proteina":30,"carboidrato":0.5},
+            {"nome":"carne bovina","gramas":100,"proteina":35,"carboidrato":1.2},
+            {"nome":"peito de peru","gramas":100,"proteina":22,"carboidrato":0},
+            {"nome":"sardinha","gramas":100,"proteina":12,"carboidrato":0},
+            {"nome":"ovo cozido (inteiro)","gramas":100,"proteina":6.5,"carboidrato":0},
+            {"nome": "atum","gramas":100,"proteina":12,"carboidrato":0},
+        ]
+      
+            msg=''
+
+            function mostrarTabelaAlimentos(){
+                document.querySelector('#output').innerHTML = msg;
+                
+            for(var i = 0; i < alimentos.length;i++){
+                msg+= "<h2>alimento:" + alimentos[i].nome + "</h2>"
+                msg+= "<p>gramas:" + alimentos[i].gramas + "</p>"
+                msg+= "<p>proteina:" + alimentos[i].proteina + "</p>"
+                msg+= "<p>carboidrato:" + alimentos[i].carboidrato + "</p>"
+
+            }
+            }
+        
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>       
+</body>
+    </html> 
+    
+
+            
+    
+        
