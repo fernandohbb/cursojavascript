@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+         <style>
+        body{
+             
+             background-color: black;
+             color:rgb(156, 8, 8)
+             
+             
+             }
+         </style>
+            
+    </head>
+    <body>
+        <h1>Logica de programacao com Javascript</h1>
+        <button onclick=" mostrarTabelaCarros()">mostrar tabela carros</button>
+        <button onclick=" selecionarCarro()">selecionar carro</button>
+        <div id="output"></div>
+        <script> 
+
+        var veiculos = [
+            {"nome":"Gol.g5 Trend","modelo":2015,"ano":2017,"marca":"volkswagen","motor": 10,"cor":"branco","preco":31000},
+            {"nome":"Gol.g6 Power","modelo":2016,"ano":2017,"marca":"volkswagen","motor": 16,"cor":"vermelho","preco":3700},
+            {"nome":"Gol.g7 Rally","modelo":2017,"ano":2018,"marca":"volkswagen","motor":10,"cor":"preto","preco":42200},
+            {"nome":"Gol.g8 Trendline","modelo":2018,"ano":2018,"marca":"volkswagen","motor":16,"cor":"branco","preco":45700},
+            {"nome":"Voyage.g6 Trend","modelo":2017,"ano":2017,"marca":"volkswagen","motor":10,"cor":"vermelho","preco":35500},
+            {"nome":"Voyage.g6 Trendline","modelo":2018,"Ano":2019,"marca":"volkswagen","motor":16,"cor":"prata","preco":44800},
+            {"nome":"Voyage.g7 Msi","modelo":2018,"ano":2019,"marca":"volkswagen","motor":16,"cor":"prata","preco":48400},
+            {"nome":"Polo Msi","modelo":2018,"ano":2019,"marca":"volkswagen","motor":10,"Cor":"preto","preco":55300},
+            {"nome":"Polo Confortline","modelo":2019,"ano":2020,"marca":"volkswagen","motor":16,"cor":"prata","preco":55700},
+            {"nome":"Polo Highline","modelo":2020,"ano":2020,"marca":"volkswagen","motor":"Tsi","cor":"branco","preco":88500},
+        ]
+            msg=''
+
+            function mostrarTabelaCarros(){
+
+            document.querySelector('#output').innerHTML = msg;
+
+
+            for(var i = 0; i < veiculos.length;i++){
+              msg+="<h2>Carro:" + veiculos[i].nome + "</h2>"
+              msg+="<p>Modelo:" + veiculos[i].modelo + "</p>"
+              msg+="<p>Ano:" + veiculos[i].ano + "</p>"
+              msg+="<p>Marca:" + veiculos[i].marca + "</p>"
+              msg+="<p>Motor:" + veiculos[i].motor + "</p>"
+              msg+="<p>Cor:" + veiculos[i].cor + "</p>"
+              msg+="<p>Preco:" + veiculos[i].preco + "</p>"
+            } 
+        
+    
+            }
+            
+            document.querySelector('#output').innerHTML = msg;
+
+</script>       
+</body>
+    </html> 
+    
+
+
+    
+    
+    
+    
