@@ -1,55 +1,122 @@
 <!doctype html>
 <html>
     <head>
-         <title>Logica de Programacao Javascript</title>
-         <meta charset="utf-8">
+         <title>Calcular imc</title>
+         <style type="text/css">
+             body{
+                 background-image: linear-gradient(45deg,cyan,yellow);
+                 font-family: Arial, Helvetica, sans-serif;
+            
+             }
+             div{
+                 background-color: rgb(7, 3, 6);
+                 position:absolute;
+                 top:50%;
+                 left:50%;
+                 transform:translate(-50%,-50%);
+                 padding: 80px;
+                 border-radius: 10px;
+                 color:rgb(231, 240, 231);
+
+             }
+             input{
+                 padding: 10px;
+                 border:none;
+                 outline:none;
+                 font-size: 15px;
+
+             }
+             button{
+                 background-color: rgb(11, 11, 241);
+                 border:none;
+                 padding:10px ;
+                 width: 100%;
+                 border-radius: 10px;
+                 color:white;
+                 font-size: 18px;
+
+             }
+             button:houver{
+                 background-color: blue;
+                 cursor: pointer;
+             }
+
+         </style>
+       </head>
+    <body> 
+        <div>
+        <h1>calcular  imc</h1>
+        <p>Digite seu nome</p>
+        <input type="nome" id="meuNome"></p>
+        <p>Digite seu peso</p>
+        <input type="peso" id="meuPeso"></p>
+        <p>Digite sua altura</p>
+        <input type="altura" id="minhaAltura"></p>
+        <label><input type="radio" name="opcao" value="masculino" checked>Masculino</label<br>
+        <label><input type="radio" name="opcao" value="feminino">Feminino</label><br><br><br>
+        <button onclick="calcularImc()">calcular imc</button>
+        </div>  
+        <script >
+
+var nome = ''
+var altura = ''
+var peso = ''
+var meuSexo = ''
+
+function calcularImc(){
+    nome= document.querySelector('#meuNome').value;
+    altura= document.querySelector('#minhaAltura').value;
+    peso= document.querySelector('#meuPeso').value;
+    meuSexo = document.querySelector('input[type="radio"]:checked').value;
 
 
-    </head>
-    <body>
-        <h1>Logica de programacao com Javascript</h1>
+    altura = parseFloat(altura);
+    peso = parseFloat(peso);
+    
+    if(!nome && ! altura && !peso){
+        alert("Preencha todos os campos!")
+    } 
 
+   var valorImc= (peso / (altura*altura)).toFixed(2);
+   var resultadoImc = valorImc;
+    
 
-        <script> 
+   verificarResultadoImc(resultadoImc);
 
-// pedir para usuario digita seu peso;
-// pedir ao usuario digita sua altura;
-var peso = prompt("digite seu peso");
-var altura = prompt("digite sua altura");
-var imc = peso / altura**2
-alert("seu imc e : " + imc);
-
-// se imc for maior que 40 , dizer que esta com obesidade grau 3 ou morbida;
-if (imc > 40){
-    alert("obesidade morbida");
 }
 
-//se imc for entre 35 e 40 ,dizer que esta com obesidade grau 2;
-if(imc > 35 && imc < 40){
-    alert("obesidade grau 2");
-}
-// se imc for entre 30 e 35,dizer que esta com obesidade grau 1;
-if(imc >30 && imc < 35){
-    alert("obesidade grau 1 ");
-} 
+function verificarResultadoImc(resultadoImc){
 
-// se imc for entre 25 e 30 ,dizer que esta com sobrepeso;
-if(imc > 25 && imc < 30){
-    alert("sobrepeso");
+if (resultadoImc > 40){
+    alert(nome + "  Seu imc e  " + resultadoImc +  "  Obesidade morbida!!!");
 }
-// se imc for entre 18,5 e 25 , dizer que esta com peso normal;
-if(imc > 18 && imc < 25 ){
-    alert("peso normal");
+if(resultadoImc > 35 && resultadoImc < 40){
+    alert(nome + "  Seu imc e " + resultadoImc + "  Obesidade grau 2!!");
 }
 
-// se peso for abaixo de 18,5 , dizer que esta abaixo do peso;
-if (imc < 18,5 ){
-    alert("abaixo do peso")
+if(resultadoImc >30 && resultadoImc < 35){
+    alert(nome + "  Seu imc e " +  resultadoImc + "  Obesidade grau 1!!");
 }
 
+
+if(resultadoImc > 25 && resultadoImc < 30) {
+    alert(nome + "  Seu imc e " + resultadoImc + "  Sobrepeso2!");
+    
+    if (resultadoImc > 20  && resultadoImc < 25) {
+        alert(nome + "  Seu imc e " + resultadoImc + "  Sobrepeso1!");
+    }
+}
+
+if(resultadoImc > 18 && resultadoImc < 25 ){
+    alert(nome + "  Seu imc e " + resultadoImc + "  Peso normal");
+}
+
+
+if (resultadoImc < 18 ){
+    alert(nome + "  Seu imc e " + resultadoImc + "  Abaixo do peso!");
+}
+}
 </script>   
-
-        
 </body>
 </html>          
 
