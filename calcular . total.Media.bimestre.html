@@ -1,0 +1,41 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<div id ="output"></div>
+<script> 
+
+
+
+var notas = [
+    [4,6,8,12],[2,5,15,4],[3,5,7,2],[7,9,10,2]
+];
+
+var msg = ''
+var mediaAnual = 0
+
+document.querySelector('#output').innerHTML = msg;
+
+
+for(var i = 0; i  < notas.length; i++){
+msg+= '<p> Notas do '+ (i + 1 ) + ' bimestre: ' + notas[i].join(',') + '</p>';
+
+var totalBimestre = 0;
+for(var j = 0; j < notas[i].length; j++){
+   totalBimestre += notas[i][j];
+}
+var mediaBimestre = totalBimestre / notas[i].length;
+mediaAnual += mediaBimestre
+msg+= '<p> A media do ' + (i + 1) + ' bimestre e:' + mediaBimestre + '</p><hr>' 
+}
+mediaAnual= mediaAnual/notas.length;
+msg+= '<p> A media anual e :' + mediaAnual + '</p>'
+document.querySelector('#output').innerHTML = msg;
+
+
+</script>   
+  </body>
+</html>   

@@ -1,0 +1,41 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<div id ="output"></div>
+<script> 
+
+
+var alunos = [
+    {nome:'maria', notas:[4,7,3,9]},
+    {nome:'caio' , notas:[9,9,4,3]},
+    {nome:'manoel', notas:[3,5,7,8]},
+    {nome:'cesar', notas:[3,6,5,7]},
+    {nome:'vitor', notas:[4,4,6,8]}
+];
+ 
+var mediaAlunos = 0;
+var msg = '';
+
+for(var i = 0 ; i < alunos.length ; i++){
+    msg+= '<p><b> ' + alunos[i].nome +' </b><p>';
+    var notas = alunos[i].notas;    
+    msg+= '<p>notas:' + notas.join(',') + ' </p>';
+    var totalNotas= 0;
+    for(var j = 0; j < notas.length; j++){
+        totalNotas+= notas[j];
+    }
+    var media =  totalNotas / notas.length;
+    mediaAlunos+= media;
+    msg+= '<p> A media e :' + media + '<p><hr>'; 
+}
+msg+= '<p> A media de todos alunos e:' + (mediaAlunos / alunos.length) + '</p>'
+
+document.querySelector('#output').innerHTML = msg;
+
+</script>   
+</body>
+</html>   

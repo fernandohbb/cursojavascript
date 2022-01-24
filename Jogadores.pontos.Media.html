@@ -1,0 +1,41 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<div id ="output"></div>
+<script> 
+
+
+var jogadores = [
+    {nome:'jogador1',pontos:[10,15,20,5]},
+    {nome:'jogador2',pontos:[12,10,10,12]},
+    {nome:'jogador3',pontos:[5,8,15,12]},
+    {nome:'jogador4',pontos:[15,15,12,10]}
+];
+
+var mediaJogadores= 0;
+var msg = ''
+
+for(var i = 0; i < jogadores.length; i++){
+    msg+='<p><b>' + jogadores[i].nome + '</b><p>';
+    var pontos = jogadores[i].pontos;    
+    msg+= '<p> pontos:' + pontos.join('|') + '</p>';  
+    var totalPontos = 0
+    for(var j = 0; j < pontos.length; j++){
+        totalPontos += pontos[j];
+    }
+    var media = totalPontos / pontos.length;
+    mediaJogadores+= media;
+    msg+= '<p> a media e :' + media + '</p><hr>';
+}
+msg+= '<p> a media de pontos de todos jogadores e' +( mediaJogadores / jogadores.length) + '</p>'
+document.querySelector('#output').innerHTML = msg;
+
+
+
+</script>   
+</body>
+</html>   
