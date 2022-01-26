@@ -1,0 +1,56 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<div id ="output"<>/div>
+<script> 
+
+
+var msg = ''
+
+var comida1 = {
+    nome:'peito de frango',
+    gramas:100,
+    proteina:25,
+    carboidrato:0,
+    gordura:0
+}
+
+var comida2 = {
+    nome:'lombo suino',
+    gramas:100,
+    proteina:20,
+    carboidrato:'0.8',
+    gordura:'1.0'
+}
+
+var comida3 = {
+    nome:'carne de vaca',
+    gramas:100,
+    proteina:30,
+    carboidrato:'0.5',
+    gordura:'1.2'
+}
+
+function Comida(nome,g,prot,carb,gord){
+    msg+='<p><b> nome:' + (this.nome = nome ) + '</b><p>';
+    msg+='<p> gramas:'+ (this.gramas = g) + '</p>';
+    msg+='<p> proteina:'+ (this.proteina = prot) + '</p>';
+    msg+='<p> carboidrato:'+ (this.carboidrato = carb) + '</p>';
+    msg+='<p> gordura:' + (this.gordura = gord) + '</p>';
+}
+
+var comida1 = new Comida('peito de frango', 100,20,0,0);
+var comida2 = new Comida('lombo suino',100,25,'0.8','1.0');
+var comida3 = new Comida('carne de vaca',100,30,'0.5','1.2');
+
+document.querySelector('#output').innerHTML = msg;
+
+      </script>   
+    </body>
+</html>          
