@@ -7,17 +7,12 @@
 </head>
 <body>
 <h1>Logica de programacao com Javascript</h1>
-<div id ="output"<>/div>
+<div id ="output"></div>
 <script> 
 
 var msg = ''
 
 function Endereco(dados){
-    
-for(var i = 0; i < alunos.length;i++){
-    msg+= alunos[i].nome
-
-}
     msg+='<p>logradouro: '+ (this.logradouro = dados.logradouro) + '</p>';
     msg+='<p>setor: '+ (this.setor = dados.setor)+'</p>';
     if(this.numero = dados.numero){
@@ -39,10 +34,27 @@ var alunos=[
     {nome:'silvia',sobrenome:'borba',endereco:new Endereco({logradouro:'rua sao miguel',setor:'oeste',cidade:'goiania',estado:'go'})},
     {nome:'ilda',sobrenome:'borba',endereco:new Endereco({logradouro:'rua lages',setor:'crixas',complemento:'perto da agrosol',cidade:'itapuranga',estado:'go',cep:'76630-111'})}
 ]
+var enderecos = [];
+var msg=''
 
+for(var i = 0; i < alunos.length;i++){
+msg+= enderecos[i]= alunos[i].endereco;
+}
 
+enderecos[1].cep = '84333-000'
+enderecos[2].cep = '8754-000'
+enderecos[1].complemento = 'perto da farmacia pague mais'
+enderecos[2].complemento = 'perto da mercearia do chico'
+for(var i = 0; i < enderecos.length;i++){
+    var endereco = enderecos[i]
 
-
+    for(propriedade in endereco){
+        if(endereco[propriedade]){
+        msg+= 'i' + i+',' + propriedade + ':' + endereco[propriedade] + '<br>'
+    }
+}
+    msg+= '<hr>'
+}
 document.querySelector('#output').innerHTML = msg;
 
 </script>   
