@@ -1,0 +1,50 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+
+
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<div id ="output"<>/div>
+<script> 
+
+var msg = ''
+
+function Endereco(dados){
+    
+for(var i = 0; i < alunos.length;i++){
+    msg+= alunos[i].nome
+
+}
+    msg+='<p>logradouro: '+ (this.logradouro = dados.logradouro) + '</p>';
+    msg+='<p>setor: '+ (this.setor = dados.setor)+'</p>';
+    if(this.numero = dados.numero){
+    msg+='<p>numero:'+ (this.numero = dados.numero || 0)+'</p>';
+    }
+    msg+='<p>complemento: '+(this.complemento = dados.complemento || '')+'</p>';
+    msg+='<p>cidade: '+(this.cidade = dados.cidade)+'</p>';
+    msg+='<p>estado: '+(this.estado = dados.estado)+'</p>';
+    if(this.cep = dados.cep){
+    msg+='<p>cep: '+(this.cep = dados.cep || '')+'</p>';
+    }
+
+    msg+= '<hr>'
+}
+
+var alunos=[
+    {nome:'fernando',sobrenome:'henrique',endereco:new Endereco({logradouro:'rua carlos gomes',setor:'centro',numero:177,complemento:'perto da positiva',cidade:'itaberai',estado:'go',cep:'76630-000'})},
+    {nome:'ruither',sobrenome:'borba',endereco:new Endereco({logradouro:'rua paulista',setor:'sul',numero:145,complmento:'perto do extra',cidade:'goiania',estado:'go'})},
+    {nome:'silvia',sobrenome:'borba',endereco:new Endereco({logradouro:'rua sao miguel',setor:'oeste',cidade:'goiania',estado:'go'})},
+    {nome:'ilda',sobrenome:'borba',endereco:new Endereco({logradouro:'rua lages',setor:'crixas',complemento:'perto da agrosol',cidade:'itapuranga',estado:'go',cep:'76630-111'})}
+]
+
+
+
+
+document.querySelector('#output').innerHTML = msg;
+
+</script>   
+</body>
+</html>          
