@@ -1,0 +1,32 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+</head>
+<body>
+<h1>Logica de programacao com Javascript</h1>
+<button onclick= "comprar()">comprar </button>
+<div id ="output"></div>
+<script> 
+
+var msg = ''
+
+var produto1 = new Object()
+    msg+='<br><p>produto:' + (produto1.nome = 'caneta');
+    msg+='<p>preco:'+ (produto1.preco = 2.0);
+    msg+='<p>estoque:'+ (produto1.estoque = 8) ;
+
+    produto1.comprar = function(qtd){
+        if(!qtd){
+            qtd = 1;
+        }
+        msg+=this.estoque = this.estoque - qtd;
+        msg+= (this.estoque);
+        msg+= alert("vc tem " + this.estoque + "caneta")
+        
+    }
+    document.querySelector('#output').innerHTML = msg;
+
+</script>   
+</body>
+</html>          
