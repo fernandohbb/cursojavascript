@@ -1,0 +1,128 @@
+<html>
+    <head>
+         <title>Calculadora</title>
+         <meta charset="utf-8">
+    </head>
+    <body>
+          <div id="display">0</div>
+      
+        <h1>Calculadora</h1>
+        <button oneclick="limpar()">AC</button>
+        <button oneclick="obterPorcento()">%</button>
+        <button oneclick="iniciarCalculo('+')" class="mais">+</button>
+        <button oneclick="iniciarCalculo('-')">-</button>
+        <button oneclick="iniciarCalculo('*')">*</button>
+        <button oneclick="iniciarCalculo('/')">/</button>
+        <button oneclick= "incluirDigito('1')">1</button>
+        <button oneclick="incluirDigito('2')">2</button>
+        <button oneclick="incluirDigito('3')">3</button>
+        <button oneclick="incluirDigito('4')">4</button>
+        <button oneclick="incluirDigito('5')">5</button>
+        <button oneclick="incluirDigito('6')">6</button>
+        <button oneclick="incluirDigito('7')">7</button>
+        <button oneclick="incluirDigito('8')">8</button>
+        <button oneclick="incluirDigito('9')">9</button>
+        <button class="zero" onclick="incluirDigito('0')">0</button>
+        <button onclick="ïncluirPonto()">.</button>
+
+        <div id="output"></div>
+
+  <script> 
+var msg = ''
+var n1 = "0"
+var operacao = null
+var n2 = ''
+  
+  function incluirDigito(digito){
+
+    if(operacao!== null){
+        n2= n2+ digito
+        mostrarNoDisplay(n2)
+      }else{
+      if(n1=== "0"){
+          n1=digito
+        }else{
+          n1+=digito
+      }
+      mostrarNoDisplay(n1)
+    }
+  }
+  var clicarEmIgual= false;
+  function finalizarCalculo(){
+    clicarEmIgual = true;
+    var resultado = calcular()
+    n1 = resultado;
+     mostraNoDisplay(n1);
+  }
+  function calcular(){
+
+    var nCalculado = 0;
+    
+  var _n1 = parseFloat(n1);
+  var _n2 = parseFloat(n2);
+
+  
+    switch (operacao){
+      case '+':
+          nCalculado = -n1 + _n2;
+      break;
+      case '-':
+          nCalculado = _n1 - _n2;
+      break;
+      case '*':
+          nCalculado = _n1 * _n2;
+      break;
+      case '/':
+          nCalculado = _n1 / _n2;
+          return nCalculado
+          break;
+    }
+    return nCalculado;
+    }
+function iniciarCalculo(simbolo){
+  if(clicarEmIgual ){
+    clicarEmIgual = false;
+    n2 ='';
+  }
+
+
+  if(operacao === null || n2 === ''){
+    operacao =  simbolo;
+  }else{
+    var resultado = calcular();
+    n1 = resultado;
+    operacao = simbolo;
+    n2 = '';
+    mostrarNoDisplay(n1);
+  }
+}
+
+
+function incluirPonto(){
+if(operacao && n2 === ''){
+n2 = '0.';
+}else if(operacao && n2){
+  n2 += + '.'
+}else{
+  n1+= '.'
+}
+}
+function limpar(){
+  n1 = '0';
+  operacao = null;
+  n2 = '';
+  mostrarNoDisplay(n2);
+}
+  function mostrarNoDisplay(valor){
+      document.querySelector('#display').innerHTML=valor
+}
+
+</script>   
+
+     </body>
+
+</html>
+
+
+
+
