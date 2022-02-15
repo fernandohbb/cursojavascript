@@ -1,0 +1,59 @@
+<html>
+    <style>
+        body{
+            background-color: rgb(207, 54, 49);
+            
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+
+        }
+    </style>
+<body>
+<h1>Calculo alimentos </h1>
+<div id="output"></div>
+</body>
+<script type="application/javascript"> 
+
+    const alimentos = [
+        {nome:"peito de frango",gramas:100,proteina:25,carboidrato:1.5,gordura:0,calorias:400},
+        {nome:"carne bovina",gramas:100,proteina:30,carboidrato:5.5,gordura:12,calorias:460},
+        {nome:"file de tilapia",gramas:100,proteina:35,carboidrato:0,gordura:2,calorias:510},
+        {nome:"sardinha em lata",gramas:100,proteina:12,carboidrato:2,gordura:8,calorias:560},
+        {nome:"lombo suino",gramas:100,proteina:30,carboidrato:6.2,gordura:12,calorias:520}
+    ]
+
+    let msg = ''
+    let totalProteina = 0;
+    let totalCarboidrato = 0;
+    let totalGordura = 0;
+    let totalCalorias = 0;
+
+        for(let i = 0; i < alimentos.length;i++){
+            let alimento = alimentos[i];
+            msg+= "<br><b><hr>" + alimento.nome + ":</b></br>";
+            msg+= "<p> " + alimento.gramas + "g</p>";
+            msg+= "<p>Proteina: " + alimento.proteina + "g</p>";
+            msg+= "<p>Carboidrato: " + alimento.carboidrato + "g</p>";
+            msg+= "<p>Gordura: " + alimento.gordura + "g</p>";
+            msg+= "<p>Calorias: " + alimento.calorias + "kj</p>";
+            totalProteina+= alimento.proteina;
+            totalCarboidrato+=alimento.carboidrato;
+            totalGordura+= alimento.gordura;
+            totalCalorias+= alimento.calorias;
+           
+
+        }
+           msg+= '<p><b>Total proteina</b>: '+totalProteina + 'g</p>';
+           msg+= "<p><b>Total carboidrato</b>: " + totalCarboidrato + "g</p>";
+           msg+= "<p><b>Total gordura</b>: " + totalGordura + "g</p>";
+           msg+= "<p><b>Total calorias</b>: " + totalCalorias + "kj<p>";
+            
+
+
+document.querySelector('#output').innerHTML = msg
+
+</script>
+</html>
+
+    
+
+
