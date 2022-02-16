@@ -1,0 +1,97 @@
+<html>
+    <head>
+         <title>tabela alimento</title>
+         <meta charset="utf-8">
+         <style>
+             body{
+                 color:black;
+                 padding: 5px;
+                 font-size: 20px;
+                background-image: linear-gradient(45deg,rgb(80, 102, 8),rgba(210, 231, 92, 0.924));
+                 
+             }
+             input{
+                 color:rgb(1, 2, 10);
+                 padding: 7px;
+                 border:none;
+                 outline:none;
+                 font-size: 15px;
+                 border-radius: 7px;
+             }
+             button{
+                 color:black;
+                 background-color:rgb(110, 112, 5);
+                 border-radius: 15%;
+                 outline:none;
+                 padding: 7px;
+                 font-size: 15px;;
+             }
+             button:hover{
+                 background-color: rgb(192, 223, 91);
+                 cursor: pointer;
+             }
+             .result{
+                 display:flex;
+                 margin-top:0px;
+                 align-items: center;
+                 width: 270px;
+                 height: 80px;
+                 border-radius: 7px;
+                 font:italic 1.5rem serif;
+                 box-shadow: 10px 5px 15px (14, 11, 216);
+                 background-color:rgb(77, 98, 6);
+                 color:rgb(10, 8, 8);
+                 padding: 30px;
+                 box-sizing: border-box;
+                 user-select: none;
+                 font-family:unset;
+             }
+         </style>
+</head>
+<body>     
+    <div class="input">
+        <label>digite nome do veiculo</label><br>
+        <input type="carro" id="adicionarCarro" placeholder="nomeCarro ">
+    </div>
+    <button onclick="adicionarVeiculo()">adocionar veiculo</button>
+    <div class="result"id='resultado'></div>
+<script> 
+
+let veiculos = [
+    {nome:"gol ",preco:32.000},
+    {nome:"polo",preco:42.800},
+    {nome:"voyage",preco:38.300},
+    {nome:"uno",preco:35.000}
+]
+
+let nomeCarro = '';
+let msg = ''
+
+
+function adicionarVeiculo(){
+        nomeCarro = document.querySelector('#adicionarCarro').value;
+        resultado = document.querySelector('resultado');
+        
+for(var i = 0; i < veiculos.length; i++){
+    const veiculo = veiculos[i];
+     veiculo.nome
+}
+verificarVeiculo();
+
+
+function verificarVeiculo(veiculo){
+    if(nomeCarro === veiculo){
+        msg = nomeCarro
+    }else{
+        msg= 'carro nao existe'
+    }
+}
+document.querySelector('#resultado').innerHTML = msg;   
+
+}
+
+
+
+</script>   
+    </body>
+    </html> 
