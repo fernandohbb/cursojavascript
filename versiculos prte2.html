@@ -1,0 +1,42 @@
+<html>
+    <head>
+         <title>Logica de Programacao Javascript</title>
+         <meta charset="utf-8">
+    </head>
+    <body>
+        <textarea id = "dividir"></textarea>
+        <button onclick="dividirTexto()">dividir texto</button> 
+<script> 
+
+
+        function dividirTexto(){
+            var textoUsuario= document.querySelector('#dividir').value;
+
+              var arrDePalavras = ['']
+                arrDePalavras = textoUsuario.split(" ");
+                var texto = " "
+                var arrTextos = [''];
+                    for(var i = 0 ; i < arrDePalavras.length; i++){
+                
+                if(texto.length < 50){
+                    texto+= arrDePalavras[i]
+                    texto+= " ";
+                }else{
+                    arrTextos.push(texto);
+                    texto = ""
+                }
+            } 
+            for(var j = 0 ; j < arrTextos.length; j++){
+                document.write(arrTextos[j])
+                document.write('<hr>')
+
+            }
+
+            }
+            
+
+            
+     
+</script>       
+    </body>
+</html>  
