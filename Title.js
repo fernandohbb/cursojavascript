@@ -1,1 +1,0 @@
-export const Title = (props) => <h1>Iniciando React</h1>
